@@ -9,11 +9,12 @@
 </head>
 <body>
     <div id="game-container">
-        <div id="hud">
-            <div class="stat">HP: <span id="hp">100</span></div>
-            <div class="stat">Level: <span id="level">1</span></div>
-            <div class="stat">Kills: <span id="kills">0</span></div>
-        </div>
+    <div id="hud">
+        <div class="stat">HP: <span id="hp">100</span></div>
+        <div class="stat">Level: <span id="level">1</span></div>
+        <div class="stat">XP: <span id="xp">0</span>/<span id="xp-next">100</span></div>
+        <div class="stat">Kills: <span id="kills">0</span></div>
+    </div>
         
         <canvas id="gameCanvas" width="800" height="400"></canvas>
         
@@ -25,7 +26,12 @@
         
         <div id="game-over" class="overlay" style="display: none;">
             <h1>Game Over</h1>
-            <p>Final Score: <span id="final-score">0</span></p>
+            <div class="final-stats">
+                <p>Kills: <span id="final-score">0</span></p>
+                <p>Level Reached: <span id="final-level">1</span></p>
+                <p>Highest Level Ever: <span id="max-level">1</span></p>
+                <p>Total Enemies Defeated: <span id="total-defeated">0</span></p>
+            </div>
             <button id="restart-btn">Play Again</button>
         </div>
     </div>
